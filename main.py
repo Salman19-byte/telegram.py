@@ -9,7 +9,7 @@ import random
 # Simpan API_ID, API_HASH, dan BOT_TOKEN di variabel lingkungan untuk keamanan
 API_ID = int(os.getenv("API_ID", "23899821"))
 API_HASH = os.getenv("API_HASH", "cf5e46488aa189b974c5ff1c3e89d123")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7811093006:AAEJPDcrCviK-RtwzD75mWHTxfrUdblmQNY")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7476480805:AAFXREzId_oDHgdiWkYDlMg3u86SxlcSghg")
 
 bot = Client("broadcast_bot", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
 
@@ -179,7 +179,7 @@ async def handle_login_steps(_, msg: Message):
             return await msg.reply("Pesan tidak boleh kosong. Coba kirim lagi.")
 
         # Tambahkan watermark ke pesan manual
-        watermark = "\n\n---\n📢 **Dikirim via UbotMoon** [@ubotmoon](https://t.me/ubotmoon)"
+        watermark = "\n\n---\n📢 **Dikirim via ** [@usermoonn_bot](https://t.me/@usermoonn_bot)"
         text_message_with_watermark = text_message + watermark
 
         data["step"] = "broadcasting"
@@ -270,4 +270,3 @@ async def stop_callback(_, cb):
         del user_states[user_id]
 
 bot.run()
-  
